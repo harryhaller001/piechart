@@ -38,7 +38,7 @@ class PieChart {
 		this.header = "";
 		this.footer = "";
 		
-		this.cleanup();		
+		//this.cleanup();		
 		this.smoothValues()
 	}
 	
