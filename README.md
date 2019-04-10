@@ -18,7 +18,13 @@ Set header and footer text.
 p.setHeader("PieChart Header");
 p.setFooter("Footer Text");
 ```
-Set target element and render
+
+Remove empty values from array.
+```javascript
+p.cleanup();
+```
+
+Set target element and render.
 ```javascript
 p.render(document.getElementById("target"));
 ```
