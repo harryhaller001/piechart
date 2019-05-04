@@ -2,6 +2,8 @@ piechart
 ========
 PieChart written in JS
 
+## piechart.js
+
 Usage
 -----
 ```javascript
@@ -27,6 +29,36 @@ p.cleanup();
 Set target element and render.
 ```javascript
 p.render(document.getElementById("target"));
+```
+
+## piechart.php
+
+This project uses php-svg (https://github.com/meyfa/php-svg). The `fonts` directory is needed for rendering.
+
+Usage
+-----
+```php
+$values = array(0.333, 0.0833, 0.0833, 0.167, 0.333);
+$names = array("Label A","Label B", "Label C", "Label D", "Label E");
+$colors = array("#dd0000", "#007700", "#00ee00", "#dddd00", "#dd00dd");
+```
+Create PieChart instance from array.
+```php
+$piechart = new PieChart();
+//...
+```
+Set header and footer text.
+```php
+$piechart=>setHeader("PieChart Header");
+$piechart=>setFooter("Footer Text");
+```
+Remove empty values from array.
+```php
+$piechart=>cleanup();
+```
+Set target element and render.
+```php
+$piechart=>render();
 ```
 
 License
