@@ -1,6 +1,6 @@
 piechart
 ========
-PieChart written in JS
+PieChart written in JS and PHP.
 
 ## piechart.js
 
@@ -44,21 +44,37 @@ $colors = array("#dd0000", "#007700", "#00ee00", "#dddd00", "#dd00dd");
 ```
 Create PieChart instance from array.
 ```php
-$piechart = new PieChart();
+$piechart = new PieChart($values, $names, $colors);
 //...
 ```
 Set header and footer text.
 ```php
-$piechart=>setHeader("PieChart Header");
-$piechart=>setFooter("Footer Text");
+$piechart->setHeader("PieChart Header");
+$piechart->setFooter("Footer Text");
 ```
-Remove empty values from array.
+Remove empty values from array and smooth values.
 ```php
-$piechart=>cleanup();
+$piechart->cleanup();
+$piechart->smoothValues();
 ```
-Set target element and render.
+Set size, radius and background-color of PieChart
 ```php
-$piechart=>render();
+$piechart->setSize(750,500);
+$piechart->setRadius(160);
+$piechart->setBackground("#FFFFFF");
+```
+Render to SVG
+```php
+header("Content-Type: image/svg+xml");
+echo $piechart->toSVG();
+```
+
+Render to PNG
+```php
+header("Content-Type: image/png");
+$image = $piechart->render();
+$rasterImage = $image->toRasterImage(1500, 1000);
+imagepng($rasterImage);
 ```
 
 License
