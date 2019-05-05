@@ -45,7 +45,6 @@ $colors = array("#dd0000", "#007700", "#00ee00", "#dddd00", "#dd00dd");
 Create PieChart instance from array.
 ```php
 $piechart = new PieChart($values, $names, $colors);
-//...
 ```
 Set header and footer text.
 ```php
