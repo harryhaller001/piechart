@@ -60,6 +60,20 @@ class PieChart {
 		target.innerHTML = this.buildSVGElement(chart,this.header, this.footer, this.buildLabels() );
 	}
 	
+	toSVG() {
+		var current = 0.0;	
+		var chart = "";	
+		
+		//iterate over values and build piechart	
+		for (var i=0; i < this.values.length; i++) {			
+			chart+=this.buildHTMLPath( this.buildPath(current, this.values[i]), this.colors[i] );
+			current += this.values[i];
+		}
+
+		
+		return this.buildSVGElement(chart,this.header, this.footer, this.buildLabels() );
+	}
+	
 	buildSVGElement(piechart, header, footer, labels) {
 		return "<svg viewBox='-100 -150 200 350' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='700' height='500' style='background: rgb(255, 255, 255);'>	<style>/* <![CDATA[ */text {	font: 10px arial, sans-serif;}/* ]]> */	</style>	<g id='out' transform='rotate(-90)'>" + piechart + "</g><g id='label'>" + labels + "</g><g transform='translate(0,-130)'><text x='0' y='0' style='text-anchor: middle; font: 14px arial, sans-serif;'>" + header + "</text></g><g id='bottom' transform='translate(0,150)'><text x='0' y='0' style='text-anchor: middle;font: 14px arial, sans-serif;font-weight:bold;'>" + footer + "</text></g></svg>";
 	}
