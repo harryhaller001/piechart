@@ -6,6 +6,11 @@ PieChart written in JS and PHP.
 
 Usage
 -----
+Import `piechart.js`
+```javascript
+<script type="text/javascript" src="piechart.js"></script>
+```
+Init varibles
 ```javascript
 var values = [0.333, 0.0833, 0.0833, 0.167, 0.333];
 var names = ["Label A","Label B", "Label C", "Label D", "Label E"];
@@ -40,6 +45,11 @@ This project uses php-svg (https://github.com/meyfa/php-svg). The `/fonts` direc
 
 Usage
 -----
+Import `piechart.php`
+```php
+include("piechart.php");
+```
+Init varibles
 ```php
 $values = array(0.333, 0.0833, 0.0833, 0.167, 0.333);
 $names = array("Label A","Label B", "Label C", "Label D", "Label E");
