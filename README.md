@@ -35,6 +35,8 @@ p.smoothValues();
 Set target element and render.
 ```javascript
 p.render(document.getElementById("target"));
+//or
+document.getElementById("target").innerHTML = p.toSVG();
 ```
 
 piechart-ie.js is the Internet Explorer compatible version of piechart.
