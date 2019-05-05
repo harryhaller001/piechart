@@ -24,6 +24,7 @@ p.setFooter("Footer Text");
 Remove empty values from array.
 ```javascript
 p.cleanup();
+p.smoothValues();
 ```
 
 Set target element and render.
