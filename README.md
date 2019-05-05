@@ -32,6 +32,8 @@ Set target element and render.
 p.render(document.getElementById("target"));
 ```
 
+piechart-ie.js is the Internet Explorer compatible version of piechart.
+
 ## piechart.php
 
 This project uses php-svg (https://github.com/meyfa/php-svg). The `/fonts` directory is needed for rendering.
