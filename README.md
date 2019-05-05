@@ -33,7 +33,7 @@ p.render(document.getElementById("target"));
 
 ## piechart.php
 
-This project uses php-svg (https://github.com/meyfa/php-svg). The `fonts` directory is needed for rendering.
+This project uses php-svg (https://github.com/meyfa/php-svg). The `/fonts` directory is needed for rendering.
 
 Usage
 -----
