@@ -7,7 +7,7 @@ PieChart written in JS and PHP.
 Usage
 -----
 Import `piechart.js`
-```javascript
+```html
 <script type="text/javascript" src="piechart.js"></script>
 ```
 Init varibles
